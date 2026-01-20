@@ -1,5 +1,5 @@
 [project]
-name = "fastbook"
+name = "fastbook-workspace"
 version = "0.1.0"
 description = "The fastai book - Introduction to deep learning with fastai and PyTorch"
 readme = "README.md"
@@ -11,6 +11,7 @@ authors = [
 ]
 
 dependencies = [
+    "fastbook",
     "fastai>=2.0.0",
     "graphviz",
     "ipywidgets",
