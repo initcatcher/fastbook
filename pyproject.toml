@@ -1,0 +1,39 @@
+[project]
+name = "fastbook"
+version = "0.1.0"
+description = "The fastai book - Introduction to deep learning with fastai and PyTorch"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "GPL-3.0-only"
+authors = [
+    { name = "Jeremy Howard" },
+    { name = "Sylvain Gugger" }
+]
+
+dependencies = [
+    "fastai>=2.0.0",
+    "graphviz",
+    "ipywidgets",
+    "matplotlib",
+    "nbdev>=0.2.12",
+    "pandas",
+    "scikit-learn",
+    "azure-cognitiveservices-search-imagesearch",
+    "sentencepiece",
+    "jupyter",
+    "scipy",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "nbformat",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["utils.py", "tools"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
