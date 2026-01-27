@@ -11,6 +11,9 @@ authors = [
 ]
 
 dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
     "fastbook",
     "fastai>=2.0.0",
     "graphviz",
@@ -38,3 +41,13 @@ only-include = ["utils.py", "tools"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+torchvision = { index = "pytorch-cu126" }
+torchaudio = { index = "pytorch-cu126" }
